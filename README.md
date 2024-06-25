@@ -25,6 +25,6 @@ after that i wll install my module - `pip install flask` etc
 
  * Reload server automatically when any changes applied - `app.run(debug=True)`
    debug = true , statement can display error on webpage
- * if want to serve application in my network - `app.run(debug=True, host:'0.0.0.0')`
+ * if want to serve application in my network - `app.run(debug=True, host='0.0.0.0')`
 
  
