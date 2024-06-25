@@ -27,4 +27,3 @@ after that i wll install my module - `pip install flask` etc
    debug = true , statement can display error on webpage
  * if want to serve application in my network - `app.run(debug=True, host='0.0.0.0')`
 
- 

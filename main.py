@@ -26,7 +26,7 @@ def Index():
 def contact():
 
     # returning the response
-    return "This is contact page"
+    return render_template('contact.html')
 
 # Third route: About us
 
