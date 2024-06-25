@@ -12,3 +12,5 @@ after that i wll install my module - `pip install flask` etc
 // if i'll install without activating virtual environment than the module will be install in my system folder (c folder of window)
 
 * To run Python program - `python main.py`
+
+* to open vscode in virtual environment , first activate v-env on CMD , then write code . (to open vscode in that folder)
