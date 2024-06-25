@@ -5,7 +5,7 @@
 # print(dir(flask))
 
 # importing the Flask class from flask module
-from flask import Flask
+from flask import Flask, render_template
 
 # let's create the objet of the Flask class
 app = Flask(__name__)
@@ -17,7 +17,7 @@ app = Flask(__name__)
 def Index():
 
     # returning the response
-    return "this is index page"
+    return render_template('index.html')
 
 # Second route: Contact us
 
@@ -38,4 +38,5 @@ def about():
     return "This is about page"
 
 # let's Run the flask Applicaton
-app.run()
+app.run(debug=True)
+# app.run(debug=True, host='0.0.0.0')
