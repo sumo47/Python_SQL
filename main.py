@@ -35,7 +35,7 @@ def contact():
 def about():
 
     # returning the response
-    return "This is about page"
+    return render_template('about.html')
 
 # let's Run the flask Applicaton
 app.run(debug=True)
