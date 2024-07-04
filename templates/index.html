@@ -49,7 +49,7 @@
                     <td>{{Task.title}}</td>
                     <td>{{Task.description}}</td>
                     <td>@mdo</td>
-                    <td><a href="/update" class="btn btn-secondary">Update</a></td>
+                    <td><a href="/update?sno={{Task.sno}}" class="btn btn-secondary">Update</a></td>
                     <td><a href="/delete?sno={{Task.sno}}" class="btn btn-danger">Delete</a></td>
                 </tr>
                 {% endfor %}

@@ -1,0 +1,29 @@
+{% extends 'parent.html' %}
+
+{% block title %}
+
+<title>Update</title>
+
+{% endblock title %}
+
+{% block main %}
+
+<h2 class="text-center">Update Task</h2>
+<div class="container">
+    <form action="/update?sno={{task.sno}}" method="post">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="Text" class="form-control" id="Title" name="Title" value="{{task.title}}">
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label><br>
+            <textarea name="Description" class="form-control" id="Description">{{task.description}}</textarea>
+        </div>
+        <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="submit" class="btn btn-success btn-lg">update</button>
+    </form>
+</div>
+{% endblock main %}

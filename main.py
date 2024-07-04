@@ -100,6 +100,32 @@ def delete():
     return redirect('/')
 
 
-    # let's Run the flask Applicaton
+# update Task Route
+
+@app.route('/update', methods=['GET', 'POST'])
+def update():
+    if request.method == 'GET':
+        sno = request.args.get('sno')
+        task = Task.query.filter_by(sno=sno).first()
+
+        return render_template('update.html', task=task)
+
+    else:
+
+        sno = request.args.get('sno')
+        title = request.form.get('Title')
+        description = request.form.get('Description')
+        # updating databse/task
+        task = Task.query.filter_by(sno=sno).first()
+        task.title = title
+        task.description = description
+
+        database.session.add(task)
+        database.session.commit()
+
+        return redirect('/')
+
+
+# let's Run the flask Applicaton
 app.run(debug=True)
 # app.run(debug=True, host='0.0.0.0')
