@@ -89,4 +89,3 @@ def update():
         return redirect('/')
 
 
-app.run(debug=True)
