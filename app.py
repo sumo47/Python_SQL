@@ -37,19 +37,16 @@ def Index():
         return render_template('index.html', allTask=allTask)
 
 
-
 @app.route('/contact')
 def contact():
 
     return render_template('contact.html')
 
 
-
 @app.route('/about')
 def about():
 
     return render_template('about.html')
-
 
 
 @app.route('/delete')
@@ -62,7 +59,6 @@ def delete():
     database.session.commit()
 
     return redirect('/')
-
 
 
 @app.route('/update', methods=['GET', 'POST'])
@@ -89,3 +85,4 @@ def update():
         return redirect('/')
 
 
+app.run(debug=True)
